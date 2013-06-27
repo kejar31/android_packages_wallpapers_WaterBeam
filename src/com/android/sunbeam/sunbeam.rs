@@ -1,6 +1,6 @@
 #pragma version(1)
 
-#pragma rs java_package_name(com.android.phasebeam)
+#pragma rs java_package_name(com.android.sunbeam)
 
 #include "rs_graphics.rsh"
 #pragma stateVertex(parent);

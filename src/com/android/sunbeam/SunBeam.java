@@ -1,16 +1,16 @@
-package com.android.phasebeam;
+package com.android.sunbeam;
 
 import android.app.Activity;
 import android.os.Bundle;
 
-public class PhaseBeam extends Activity {
+public class SunBeam extends Activity {
 
-    private PhaseBeamView mView;
+    private SunBeamView mView;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mView = new PhaseBeamView(this);
+        mView = new SunBeamView(this);
         setContentView(mView);
     }
 }

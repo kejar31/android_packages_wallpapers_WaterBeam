@@ -1,4 +1,4 @@
-package com.android.phasebeam;
+package com.android.sunbeam;
 
 import static android.renderscript.Sampler.Value.NEAREST;
 import static android.renderscript.Sampler.Value.WRAP;
@@ -29,12 +29,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 import android.util.Log;
 
-public class PhaseBeamRS {
-    public static String LOG_TAG = "PhaseBeam";
+public class SunBeamRS {
+    public static String LOG_TAG = "SunBeam";
     public static final int DOT_COUNT = 28;
     private Resources mRes;
     private RenderScriptGL mRS;
-    private ScriptC_phasebeam mScript;
+    private ScriptC_sunbeam mScript;
     int mHeight;
     int mWidth;
 
@@ -76,7 +76,7 @@ public class PhaseBeamRS {
             smb3.addIndexSetType(Mesh.Primitive.POINT);
             mBeamMesh = smb3.create();
 
-            mScript = new ScriptC_phasebeam(mRS, mRes, R.raw.phasebeam);
+            mScript = new ScriptC_sunbeam(mRS, mRes, R.raw.sunbeam);
             mScript.set_dotMesh(mDotMesh);
             mScript.set_beamMesh(mBeamMesh);
             mScript.bind_dotParticles(mDotParticles);
