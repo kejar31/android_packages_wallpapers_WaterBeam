@@ -1,16 +1,16 @@
-package com.android.sunbeam;
+package com.android.waterbeam;
 
 import android.content.Context;
 import android.renderscript.RSSurfaceView;
 import android.renderscript.RenderScriptGL;
 import android.view.SurfaceHolder;
 
-public class SunBeamView extends RSSurfaceView {
+public class WaterBeamView extends RSSurfaceView {
 
     private RenderScriptGL mRS;
-    private SunBeamRS mRender;
+    private WaterBeamRS mRender;
 
-    public SunBeamView(Context context) {
+    public WaterBeamView(Context context) {
         super(context);
         setFocusable(true);
         setFocusableInTouchMode(true);
@@ -24,7 +24,7 @@ public class SunBeamView extends RSSurfaceView {
             mRS = createRenderScriptGL(sc);
             mRS.setSurface(holder, w, h);
 
-            mRender = new SunBeamRS();
+            mRender = new WaterBeamRS();
             mRender.init(240, mRS, getResources(), w, h);
         }
 

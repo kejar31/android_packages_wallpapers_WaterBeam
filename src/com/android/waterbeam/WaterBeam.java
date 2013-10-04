@@ -1,16 +1,16 @@
-package com.android.sunbeam;
+package com.android.waterbeam;
 
 import android.app.Activity;
 import android.os.Bundle;
 
-public class SunBeam extends Activity {
+public class WaterBeam extends Activity {
 
-    private SunBeamView mView;
+    private WaterBeamView mView;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mView = new SunBeamView(this);
+        mView = new WaterBeamView(this);
         setContentView(mView);
     }
 }

@@ -1,4 +1,4 @@
-package com.android.sunbeam;
+package com.android.waterbeam;
 
 import android.app.Service;
 import android.graphics.PixelFormat;
@@ -10,7 +10,7 @@ import android.util.DisplayMetrics;
 import android.view.SurfaceHolder;
 import android.view.WindowManager;
 
-public class SunBeamWallpaper extends WallpaperService {
+public class WaterBeamWallpaper extends WallpaperService {
 
     @Override
     public Engine onCreateEngine() {
@@ -19,7 +19,7 @@ public class SunBeamWallpaper extends WallpaperService {
 
     private class RenderScriptEngine extends Engine {
         private RenderScriptGL mRenderScript = null;
-        private SunBeamRS mWallpaperRS = null;
+        private WaterBeamRS mWallpaperRS = null;
         private int mDensityDPI;
 
         @Override
@@ -59,7 +59,7 @@ public class SunBeamWallpaper extends WallpaperService {
             super.onSurfaceCreated(surfaceHolder);
 
             RenderScriptGL.SurfaceConfig sc = new RenderScriptGL.SurfaceConfig();
-            mRenderScript = new RenderScriptGL(SunBeamWallpaper.this, sc);
+            mRenderScript = new RenderScriptGL(WaterBeamWallpaper.this, sc);
             mRenderScript.setPriority(RenderScript.Priority.NORMAL);
         }
 
@@ -79,7 +79,7 @@ public class SunBeamWallpaper extends WallpaperService {
             }
 
             if (mWallpaperRS == null) {
-                mWallpaperRS = new SunBeamRS();
+                mWallpaperRS = new WaterBeamRS();
                 mWallpaperRS.init(mDensityDPI, mRenderScript, getResources(), width, height);
                 mWallpaperRS.start();
             }
